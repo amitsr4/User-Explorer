@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-// import ReorderIcon from "@material-ui/icons/Reorder";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 import "../styles/Navbar.css";
 
 function Navbar() {
@@ -24,8 +25,8 @@ function Navbar() {
         <Link to="/users"> Users </Link>
         <Link to="/about"> About </Link>
         <button onClick={toggleNavbar}>
-          {/* <ReorderIcon /> */}
-          </button>
+          <FontAwesomeIcon icon={faBars}></FontAwesomeIcon>
+        </button>
       </div>
     </div>
   );

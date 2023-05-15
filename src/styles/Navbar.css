@@ -4,6 +4,7 @@
   background-color: #203545;
   display: flex;
   flex-direction: row;
+  font-family: Georgia, serif;
 }
 
 .navbar .leftSide {

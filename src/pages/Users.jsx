@@ -1,7 +1,7 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import "./User.css";
+import "../styles/User.css";
 
 function Users() {
   const [users, setUsers] = useState([]);
@@ -42,7 +42,6 @@ function Users() {
 
   return (
     <div className="users-container">
-      
       <table className="table">
         <thead>
           <tr>

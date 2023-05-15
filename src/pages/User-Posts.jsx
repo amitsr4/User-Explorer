@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-
 import { Link, useParams, useLocation } from "react-router-dom";
 import Post from "../Components/Post";
-import "./UserPosts.css";
-
+import "../styles/UserPosts.css";
 
 function UserPosts(props) {
   const [posts, setPosts] = useState([]);
@@ -33,9 +31,8 @@ function UserPosts(props) {
   };
 
   const removePost = (id) => {
-    setPosts(posts.filter(post => post.id !== id));
+    setPosts(posts.filter((post) => post.id !== id));
   };
-
 
   return (
     <div className="user-posts">
@@ -49,7 +46,12 @@ function UserPosts(props) {
         placeholder="Search by title"
       />
       {filteredPosts.map((post) => (
-        <Post id={post.id} title={post.title} body={post.body} removePost={removePost} />
+        <Post
+          id={post.id}
+          title={post.title}
+          body={post.body}
+          removePost={removePost}
+        />
       ))}
       <Link to="/users">Go back</Link>
     </div>
